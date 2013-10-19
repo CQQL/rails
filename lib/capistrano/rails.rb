@@ -2,7 +2,7 @@ load File.expand_path("../tasks/rails.rake", __FILE__)
 
 module Capistrano
   module Rails
-    def use_bundler?
+    def self.use_bundler?
       Gem::Specification::find_all_by_name('capistrano-bundler').any?
     end
   end
